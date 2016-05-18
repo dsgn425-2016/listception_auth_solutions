@@ -6,7 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+user = User.create email: "alice@example.com", password: "123456"
+
 board = Board.new
+board.user_id = user.id
 board.name = "Books to read"
 board.save
 
